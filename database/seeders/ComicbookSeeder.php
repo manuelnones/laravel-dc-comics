@@ -15,19 +15,22 @@ class ComicbookSeeder extends Seeder
      */
     public function run()
     {
-        for ($i = 0; $i < 12; $i ++) {
-            
+         $comicBooks = config('comics');
+        
+        foreach ($comicBooks as $comicBook) {
+
             $newComicBook = new Comicbook();
-            
-            $newComicBook->title = 'title';
-            $newComicBook->description = 'description';
-            $newComicBook->thumb = 'image';
-            $newComicBook->price = '$12.99';
-            $newComicBook->series = 'series';
-            $newComicBook->sale_date = '1998-10-02';
-            $newComicBook->type = 'type';
-    
+
+            $newComicBook->title = $comicBook['title'];
+            $newComicBook->description = $comicBook['description'];
+            $newComicBook->thumb = $comicBook['thumb'];
+            $newComicBook->price = $comicBook['price'];
+            $newComicBook->series = $comicBook['series'];
+            $newComicBook->sale_date = $comicBook['sale_date'];
+            $newComicBook->type = $comicBook['type'];
+
             $newComicBook->save();
+
         }
 
     }
