@@ -43,9 +43,7 @@ class PageController extends Controller
             'news',
             'shop'
         ];
-    
-        $comicBooks = config("comics");
-    
-        return view('home', compact('linkNav', 'comicBooks', 'iconShopElement'));
+        
+        return view('home', compact('linkNav', 'iconShopElement'));
     }
 }

@@ -6,8 +6,17 @@
 <main class="pt-5">
     <div class="container">
         
-        <div class="text-center pb-5">
-            <a href="{{ route('bookcomics.index') }}"><h1>Vai alla lista dei fumetti</h1></a>
+        <div class="comic-books-container">
+
+            @foreach ($comicBooks as $book)
+            <div class="comic-book">
+                <div class="img-comic-book">
+                    <img src="{{ $book['thumb'] }}" alt="">
+                </div>
+                <h5 class="book-title">{{ $book['series'] }}</h5>
+            </div>
+            @endforeach
+                
         </div>
 
         <div class="btn-container mb-4">
