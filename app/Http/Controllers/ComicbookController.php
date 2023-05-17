@@ -53,7 +53,7 @@ class ComicbookController extends Controller
         $comicBooks = Comicbook::all();
         // $comicBooks = config("comics");
 
-        return view('comicBooks/index', compact('comicBooks', 'linkNav', 'iconShopElement'));
+        return view ('comicBooks/index', compact('comicBooks', 'linkNav', 'iconShopElement'));
     }
 
     /**
@@ -85,7 +85,21 @@ class ComicbookController extends Controller
      */
     public function show(Comicbook $comicbook)
     {
-        //
+        // dd($comicbook);
+        // $linkNav = [
+        //     'characters',
+        //     'comics',
+        //     'movies',
+        //     'tv',
+        //     'games',
+        //     'collectibles',
+        //     'videos',
+        //     'fans',
+        //     'news',
+        //     'shop'
+        // ];
+        
+        // return view('comicBooks/show', compact('comicbook', 'linkNav'));
     }
 
     /**
