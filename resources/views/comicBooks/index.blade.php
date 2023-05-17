@@ -11,10 +11,9 @@
             @foreach ($comicBooks as $book)
             <div class="comic-book">
                 <div class="img-comic-book">
-                    <a href="{{ route('bookcomics.show', $book) }}"><img src="{{ $book['thumb'] }}" alt=""></a>
+                    <a href="{{ route('comicbooks.show', $book) }}"><img src="{{ $book['thumb'] }}" alt=""></a>
                 </div>
-                {{-- <a href="{{ route('bookcomics.show') }}" class="book-title"></a> --}}
-                <a href="{{ route('bookcomics.show', $book) }}" class="text-light"><h5>{{ $book['series'] }}</h5></a>
+                <a href="{{ route('comicbooks.show', $book) }}" class="text-light"><h5>{{ $book['series'] }}</h5></a>
             </div>
             @endforeach
                 

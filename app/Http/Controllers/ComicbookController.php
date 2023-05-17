@@ -85,7 +85,6 @@ class ComicbookController extends Controller
      */
     public function show(Comicbook $comicbook)
     {
-        dd($comicbook);
         $linkNav = [
             'characters',
             'comics',

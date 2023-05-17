@@ -4,12 +4,11 @@
 @section('content')
 
 <main class="text-center text-light">
-    {{dd($comicbook->series)}}
   <img src="{{$comicbook->thumb}}" alt="immagine della pasta">
 
   <hr>
 
-  <h1>{{$comicbook->title}}</h1>
+  <h1>{{$comicbook->series}}</h1>
 
   <ul class="text-left">
     <li>

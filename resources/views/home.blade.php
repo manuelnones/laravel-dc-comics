@@ -7,7 +7,7 @@
     <div class="container">
         
         <div class="text-center pb-5">
-            <a href="{{ route('bookcomics.index') }}"><h1>Vai alla lista dei fumetti</h1></a>
+            <a href="{{ route('comicbooks.index') }}"><h1>Vai alla lista dei fumetti</h1></a>
         </div>
 
         <div class="btn-container mb-4">
