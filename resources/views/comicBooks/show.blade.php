@@ -3,7 +3,7 @@
 
 @section('content')
 
-{{-- <main class="text-center text-light">
+<main class="text-center text-light">
     {{dd($comicbook->series)}}
   <img src="{{$comicbook->thumb}}" alt="immagine della pasta">
 
@@ -19,7 +19,7 @@
   <p>
     {{$comicbook->description}}
   </p>
-</main> --}}
-sei nel show
+</main>
+{{-- {{dd($comicbook)}} --}}
 
 @endsection

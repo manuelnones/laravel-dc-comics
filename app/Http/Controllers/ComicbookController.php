@@ -85,21 +85,21 @@ class ComicbookController extends Controller
      */
     public function show(Comicbook $comicbook)
     {
-        // dd($comicbook);
-        // $linkNav = [
-        //     'characters',
-        //     'comics',
-        //     'movies',
-        //     'tv',
-        //     'games',
-        //     'collectibles',
-        //     'videos',
-        //     'fans',
-        //     'news',
-        //     'shop'
-        // ];
+        dd($comicbook);
+        $linkNav = [
+            'characters',
+            'comics',
+            'movies',
+            'tv',
+            'games',
+            'collectibles',
+            'videos',
+            'fans',
+            'news',
+            'shop'
+        ];
         
-        // return view('comicBooks/show', compact('comicbook', 'linkNav'));
+        return view('comicBooks/show', compact('comicbook', 'linkNav'));
     }
 
     /**
