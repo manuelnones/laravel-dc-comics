@@ -130,7 +130,20 @@ class ComicbookController extends Controller
      */
     public function edit(Comicbook $comicbook)
     {
-        //
+        $linkNav = [
+            'characters',
+            'comics',
+            'movies',
+            'tv',
+            'games',
+            'collectibles',
+            'videos',
+            'fans',
+            'news',
+            'shop'
+        ];
+
+        return view('comicbooks/edit', compact('comicbook', 'linkNav'));
     }
 
     /**
@@ -142,7 +155,11 @@ class ComicbookController extends Controller
      */
     public function update(Request $request, Comicbook $comicbook)
     {
-        //
+        $data = $request->all();
+
+        $comicbook->update($data);
+
+        return redirect()->route('pasta/show', $comicbook);
     }
 
     /**

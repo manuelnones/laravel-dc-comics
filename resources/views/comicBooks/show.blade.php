@@ -22,7 +22,7 @@
     </p>
 
     <div class="btn-container p-4">
-        <a href="" class="mx-5">EDIT COMIC</a></button>
+        <a href="{{route('comicbooks.edit', $comicbook)}}" class="mx-5">EDIT COMIC</a></button>
         <a href="" class="text-danger mx-5">DELETE COMIC</a></button>
     </div>
 </main>
