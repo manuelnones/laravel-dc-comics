@@ -63,7 +63,20 @@ class ComicbookController extends Controller
      */
     public function create()
     {
-        //
+        $linkNav = [
+            'characters',
+            'comics',
+            'movies',
+            'tv',
+            'games',
+            'collectibles',
+            'videos',
+            'fans',
+            'news',
+            'shop'
+        ];
+
+        return view('comicbooks/create', compact('linkNav'));
     }
 
     /**
@@ -74,7 +87,15 @@ class ComicbookController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        $formData = $request->all();
+
+        $newComic = new Comicbook();
+
+        $newComic->fill($formData);
+
+        $newComic->save();
+
+        return redirect()->route('comicbooks.show', $newComic);
     }
 
     /**

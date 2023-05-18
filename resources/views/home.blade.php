@@ -10,9 +10,6 @@
             <a href="{{ route('comicbooks.index') }}"><h1>Vai alla lista dei fumetti</h1></a>
         </div>
 
-        <div class="btn-container mb-4">
-            <button type="button" class="btn ps-5 pe-5 rounded-0">LOAD MORE</button>
-        </div>
     </div>
     
     <div id="shop-elements-container">

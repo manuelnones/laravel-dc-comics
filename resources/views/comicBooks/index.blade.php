@@ -20,8 +20,10 @@
         </div>
 
         <div class="btn-container mb-4">
-            <button type="button" class="btn ps-5 pe-5 rounded-0">LOAD MORE</button>
+            <button type="button" class="btn ps-5 pe-5 rounded-0"><a href="">LOAD MORE</a></button>
+            <button type="button" class="btn ps-5 pe-5 rounded-0"><a href="{{route('comicbooks.create')}}">ADD COMIC BOOK</a></button>
         </div>
+
     </div>
     
     <div id="shop-elements-container">
