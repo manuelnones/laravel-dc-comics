@@ -159,7 +159,7 @@ class ComicbookController extends Controller
 
         $comicbook->update($data);
 
-        return redirect()->route('pasta/show', $comicbook);
+        return redirect()->route('comicbooks.show', $comicbook);
     }
 
     /**
@@ -170,6 +170,8 @@ class ComicbookController extends Controller
      */
     public function destroy(Comicbook $comicbook)
     {
-        //
+        $comicbook->delete();
+
+        return redirect()->route('comicbooks.index');
     }
 }

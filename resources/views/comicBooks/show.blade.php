@@ -22,8 +22,14 @@
     </p>
 
     <div class="btn-container p-4">
-        <a href="{{route('comicbooks.edit', $comicbook)}}" class="mx-5">EDIT COMIC</a></button>
-        <a href="" class="text-danger mx-5">DELETE COMIC</a></button>
+        <button class="btn btn-primary mb-3"><a href="{{route('comicbooks.edit', $comicbook)}}" class="text-decoration-none text-light">EDIT COMIC</a></button>
+
+        <form action="{{route('comicbooks.destroy', $comicbook)}}" method="POST">
+            @csrf
+            
+            @method('DELETE')
+            <button class="btn btn-danger mx-5">DELETE COMIC</button>
+        </form>
     </div>
 </main>
 
